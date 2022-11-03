@@ -48,7 +48,7 @@ bash script/train_supernet.sh
 ```shell
 bash script/search_evo.sh
 ```
-
+Then the searched "myburger" will exist in arch.py
 
 # Citation
 Please cite our paper if you find anything helpful.
