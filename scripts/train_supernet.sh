@@ -3,7 +3,7 @@ gpu="0,1,2,3,4,5,6,7"
 NUM_PROC=8
 port=12345
 
-IMAGENET_PATH="/public/home/yanglongxing/dataset/imagenet_supernet"  # YOUR_PATH
+IMAGENET_PATH="/IMAGENET_PATH"  # YOUR_PATH, make /IMAGENET_PATH/sub-train & /IMAGENET_PATH/sub-val  exist
 log_path=train_supernet
 
 mkdir -p logs/${log_path}

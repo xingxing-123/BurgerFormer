@@ -3,7 +3,7 @@ gpu="0,1,2,3,4,5,6,7"
 NUM_PROC=8
 port=12345
 
-IMAGENET_PATH="/public/home/public/imagenet/"  # YOUR_PATH, make /IMAGENET_PATH/sub-val exist
+IMAGENET_PATH="/IMAGENET_PATH"  # YOUR_PATH, make /IMAGENET_PATH/sub-train & /IMAGENET_PATH/sub-val  exist
 log_path=search_evo
 
 target=flops
