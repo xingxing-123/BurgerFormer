@@ -1,6 +1,6 @@
 # Searching for BurgerFormer with Micro-Meso-Macro Space Design (ICML 2022)
 
-This is an official pytorch implementation for "Searching for BurgerFormer with Micro-Meso-Macro Space Design". 
+This is an official pytorch implementation for "[Searching for BurgerFormer with Micro-Meso-Macro Space Design](https://proceedings.mlr.press/v162/yang22f.html)".
 ![BurgerFormer-img1](img/design.png)
 ![BurgerFormer-img2](img/space.png)
 
@@ -14,6 +14,13 @@ Pre-trained checkpoints are released [google drive](https://drive.google.com/dri
 
 Note: access code for `baiduyun` is `gvfl`.
 
+| model | FLOPs/G | Params/M | ImageNet Top1/% |
+|  :----: | :----: | :----: | :----: |
+| BurgerFormer-tiny | 1.0 | 10 | 78.0 |
+| BurgerFormer-small | 2.1 | 14 | 80.4 |
+| BurgerFormer-base | 3.9 | 26 | 82.7 |
+| BurgerFormer-large | 6.5 | 36 | 83.0 |
+
 # Validation
 To evaluate a pre-trained BurgerFormer model on ImageNet, run:
 ```shell
@@ -26,8 +33,22 @@ To retrain a BurgerFormer model on ImageNet, run:
 bash script/train.sh
 ```
 
-# TODO
-- [ ] Searching Code
+# Search
+1. Split ImageNet training dataset to get sub-train & sub-val
+```shell
+bash script/imagenet_build.sh
+```
+
+2. Supernet Training (8 V100 32G)
+```shell
+bash script/train_supernet.sh
+```
+
+3. Evolution Search
+```shell
+bash script/search_evo.sh
+```
+
 
 # Citation
 Please cite our paper if you find anything helpful.
